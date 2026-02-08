@@ -1,0 +1,7 @@
+**/__pycache__/
+.env
+.spyproject/
+**/*.mo
+.vscode/
+.venv/
+.devcontainer/
