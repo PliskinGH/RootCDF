@@ -1,14 +1,15 @@
 asgiref==3.11.1
 dj-database-url==3.1.0
 Django==6.0.2
+django-fullurl==1.4
 django-tinymce==5.0.0
 dotenv==0.9.9
 gitdb==4.0.12
 GitPython==3.1.41
-pip==26.0.1
 psycopg2-binary==2.9.11
 python-dotenv==1.2.1
 setuptools==78.1.1
 smmap==5.0.2
 sqlparse==0.5.5
+tzdata==2025.3
 whitenoise==6.11.0
