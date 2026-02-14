@@ -64,6 +64,8 @@ MIDDLEWARE = [
     'django.middleware.locale.LocaleMiddleware',
 ]
 
+SITE_ID=1
+
 ROOT_URLCONF = "RootCDF.urls"
 
 TEMPLATES = [

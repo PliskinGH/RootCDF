@@ -21,4 +21,6 @@ from django.urls import path, include
 urlpatterns = [
     path("", include("cdf.urls", namespace="cdf")),
     path("admin/", admin.site.urls),
+    path("", include("django.contrib.flatpages.urls")),
+    path('tinymce/', include('tinymce.urls')),
 ]
