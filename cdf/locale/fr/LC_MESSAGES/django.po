@@ -1,0 +1,85 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-15 20:20+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+#: .\cdf\models.py:14
+msgid "title"
+msgstr ""
+
+#: .\cdf\models.py:15
+msgid "Optional if flat page."
+msgstr ""
+
+#: .\cdf\models.py:19
+msgid "flat page"
+msgstr ""
+
+#: .\cdf\models.py:22
+msgid "Leave blank if flat page."
+msgstr ""
+
+#: .\cdf\models.py:23
+msgid "priority"
+msgstr ""
+
+#: .\cdf\models.py:25
+msgid ""
+"Priority of display in the menu. Lower values are displayed first. 0 is not "
+"displayed."
+msgstr ""
+
+#: .\cdf\models.py:29
+msgid "description"
+msgstr ""
+
+#: .\cdf\models.py:30
+msgid "Description for meta tags."
+msgstr ""
+
+#: .\cdf\models.py:32
+msgid "image URL"
+msgstr ""
+
+#: .\cdf\models.py:33
+msgid "Image for meta tags. Relative path if in static files, or full URL."
+msgstr ""
+
+#: .\cdf\models.py:36
+msgid "menu item"
+msgstr ""
+
+#: .\cdf\models.py:37
+msgid "menu items"
+msgstr ""
+
+#: .\cdf\templates\cdf\base.html:18
+msgid "Coupe de France ROOT - La Grande Journée ROOT"
+msgstr ""
+
+#: .\cdf\templates\cdf\base.html:18
+msgid ""
+"La Grande Journée Root est un rendez-vous annuel, et s'y déroule la finale "
+"de la Coupe de France qui réunit l'ensemble des finalistes des Qualifiers. "
+"La journée est également l'occasion de réunir plus largement les joueurs de "
+"la communauté francophone de Root à travers des animations autour de "
+"l'uniers du jeu et de l'auteur."
+msgstr ""
+
+#: .\cdf\templates\cdf\base.html:61
+msgid "Accueil"
+msgstr ""

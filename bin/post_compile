@@ -1,1 +1,1 @@
-python ./manage.py compilemessages -i .heroku
+python ./manage.py compilemessages -i .heroku -i .venv
