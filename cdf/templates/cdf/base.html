@@ -1,23 +1,25 @@
 {% load static %}
+{% get_static_prefix as STATIC_PREFIX %}
 {% load flatpages %}
 {% load i18n %}
 {% load fullurl %}
 {% load menu_items %}
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="fr">
     <head>
         <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
         <meta charset="utf-8" />
         <meta name="viewport"
               content="width=device-width,initial-scale=1,shrink-to-fit=no" />
-        <meta name="description"
-              content="La Loi de Root. Portail de ressources pour le jeu de plateau Root, publié par Leder Games et Matagot pour la VF." />
-        <title>La Loi de Root : Conflit dans les Sous-Bois</title>
-        <meta property="og:title"
-              content="La Loi de Root: Conflit dans les Sous-Bois" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="{{ request.build_absolute_uri }}" />
-        <meta property="og:image" content="{% fullstatic 'assets/image/og.png' %}" />
+        {% block meta %}
+        {% with image_url=STATIC_PREFIX|add:"assets/image/logo-grande-journee-root-2025.png" %}
+        {% include "cdf/meta.html" with title=_("Coupe de France ROOT - La Grande Journée ROOT") 
+                                        image_url=image_url
+                                        description=_("La Grande Journée Root est un rendez-vous annuel, et s'y déroule la finale de la Coupe de France qui réunit l'ensemble des finalistes des Qualifiers. La journée est également l'occasion de réunir plus largement les joueurs de la communauté francophone de Root à travers des animations autour de l'uniers du jeu et de l'auteur.") %}
+        {% endwith %}
+        {% endblock meta %}
         <!-- base href="" -->
         <link href="{% static 'assets/css/pure-min.css' %}" rel="stylesheet" />
         <link href="{% static 'assets/css/grids-responsive-min.css' %}"
@@ -52,7 +54,7 @@
       }
         </style>
     </head>
-    <body id="RootLaw" lang="en-US">
+    <body id="RootLaw" lang="fr-FR">
         <div class="custom-wrapper pure-g" id="menu">
             <div class="pure-u-1 pure-u-md-1-3">
                 <div class="pure-menu">

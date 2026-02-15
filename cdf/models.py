@@ -1,7 +1,8 @@
 from django.db import models
 from django.contrib.flatpages.models import FlatPage
 from django.utils.translation import gettext_lazy as _
-from django.core.validators import EMPTY_VALUES
+from django.core.validators import EMPTY_VALUES, URLValidator
+from django.templatetags.static import static
 
 # Create your models here.
 
@@ -24,6 +25,12 @@ class MenuItem(models.Model):
                                    help_text=_("Priority of display in the menu. " \
                                    "Lower values are displayed first. " \
                                    "0 is not displayed."),)
+    description = models.CharField(max_length=1000, blank=True,
+                                   verbose_name=_('description'),
+                                   help_text=_('Description for meta tags.'))
+    image_url = models.CharField(max_length=2048, blank=True,
+                                 verbose_name=_("image URL"),
+                                 help_text=_("Image for meta tags. Relative path if in static files, or full URL."))
 
     class Meta:
         verbose_name = _("menu item")
@@ -52,3 +59,18 @@ class MenuItem(models.Model):
             return self.flatpage.title
         else:
             return ""
+        
+    def get_image_url(self):
+        image_url = self.image_url
+        if (image_url not in EMPTY_VALUES):
+            try:
+                URLValidator()(self.image_url)
+            except Exception as e:
+                image_url = static(image_url)
+        return image_url
+    
+    def get_description(self):
+        if (self.description not in EMPTY_VALUES):
+            return self.description
+        else:
+            return self.get_title()

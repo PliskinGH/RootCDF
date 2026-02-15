@@ -48,6 +48,8 @@ INSTALLED_APPS = [
     'django.contrib.flatpages',
     'django.contrib.sitemaps',
     'fullurl',
+    'crispy_forms',
+    'crispy_bootstrap5',
     'tinymce',
     'cdf',
 ]
@@ -149,6 +151,9 @@ TINYMCE_DEFAULT_CONFIG = {
     "toolbar_mode" : "sliding",
 }
 
+# Crispy
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/6.0/howto/static-files/

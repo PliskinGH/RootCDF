@@ -4,10 +4,22 @@
 
 {% load i18n %}
 
+{% block meta %}
+{% with flatpage.menu_item as menu_item %}
+{% if menu_item %}
+{% include "cdf/meta.html" with title=menu_item.get_title
+                                image_url=menu_item.get_image_url
+                                description=menu_item.get_description %}
+{% else %}
+{{ block.super }}
+{% endif %}
+{% endwith %}
+{% endblock meta %}
+
 {% block content %}
 
 <div id="content">
 {{ flatpage.content | safe }}
 </div>
 
-{% endblock %}
+{% endblock content %}
