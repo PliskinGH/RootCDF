@@ -30,7 +30,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', "django-insecure-5ch4ihqiee@-exl^v=p6ylpvx8=3_&(elrd38o07$5_42k2vr!")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+if DJANGO_ENV == 'PRODUCTION':
+    DEBUG = True
+else:
+    DEBUG = False
 
 ALLOWED_HOSTS = os.environ.get('DJANGO_ALLOWED_HOSTS', '').split(' ')
 
@@ -148,10 +151,6 @@ TINYMCE_DEFAULT_CONFIG = {
     "forecolor backcolor emoticons | help",
     "toolbar_mode" : "sliding",
 }
-
-# Crispy
-CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
-CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
