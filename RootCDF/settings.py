@@ -48,8 +48,6 @@ INSTALLED_APPS = [
     'django.contrib.flatpages',
     'django.contrib.sitemaps',
     'fullurl',
-    'crispy_forms',
-    'crispy_bootstrap5',
     'tinymce',
     'cdf',
 ]
