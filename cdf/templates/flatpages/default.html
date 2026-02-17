@@ -7,7 +7,7 @@
 {% block meta %}
 {% with flatpage.menu_item as menu_item %}
 {% if menu_item %}
-{% include "cdf/meta.html" with title=menu_item.get_title
+{% include "cdf/meta.html" with title=menu_item.get_title|add:_(" | Coupe de France Root")
                                 image_url=menu_item.get_image_url
                                 description=menu_item.get_description %}
 {% else %}
